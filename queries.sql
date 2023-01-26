@@ -1,7 +1,5 @@
 /*Queries that provide answers to the questions from all projects.*/
 
-SELECT * from animals;
-
 -- Find all animals whose name ends in "mon".
 
 SELECT * from animals WHERE name LIKE '%mon';
@@ -30,9 +28,7 @@ SELECT * from animals WHERE neutered = TRUE;
 
 SELECT * from animals WHERE name != 'Gabumon';
 
--- Find all animals with a weight between 10.4kg and 17.3kg
--- (including the animals with the weights that equals precisely 
--- 10.4kg or 17.3kg)
+-- Find all animals with a weight between 10.4kg and 17.3kg (including the animals with the weights that equals precisely 10.4kg or 17.3kg)
 
 SELECT * from animals WHERE weight_kg BETWEEN 10.39 AND 17.31;
 
