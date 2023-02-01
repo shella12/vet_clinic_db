@@ -143,3 +143,24 @@ SELECT full_name, count FROM (SELECT O.full_name, count FROM (SELECT owner_id, C
 GROUP BY owner_id) A JOIN owners O ON A.owner_id = O.id) AS J1 JOIN
 (SELECT  MAX(count) as max FROM (SELECT owner_id, COUNT(owner_id) FROM animals
 GROUP BY owner_id) C) AS J2 ON J1.count = J2.max;
+
+--------------------------------------------
+--------------------------------------------
+
+-- Who was the last animal seen by William Tatcher?
+
+SELECT animal, date_of_visit from visits WHERE vet_name = 'William Tatcher' ORDER BY date_of_visit DESC;
+
+-- How many different animals did Stephanie Mendez see?
+
+SELECT COUNT(DISTINCT animal) from visits WHERE vet_name = 'Stephanie Mendez';
+
+-- List all vets and their specialties, including vets with no specialties.
+
+SELECT * from vets v JOIN specializations s ON  v.id = s.vet_id WHERE 
+-- List all animals that visited Stephanie Mendez between April 1st and August 30th, 2020.
+-- What animal has the most visits to vets?
+-- Who was Maisy Smith's first visit?
+-- Details for most recent visit: animal information, vet information, and date of visit.
+-- How many visits were with a vet that did not specialize in that animal's species?
+-- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
