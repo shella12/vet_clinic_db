@@ -91,3 +91,8 @@ CREATE TABLE visits (
     REFERENCES animals (id)
     ON DELETE CASCADE
 );
+
+----------------------------------
+----------------------------------
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
